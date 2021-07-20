@@ -30,10 +30,10 @@ impl App {
         let window = Window::new()?;
         window.SetTitle("WinUI Desktop, Unpackaged (Rust)")?;
         window.Activate();
-        self._window = Some(window);
+        self._window = Some(window.clone());
         //uncomment this line to abandon the event pump
         //This will cause resizing to work reliably again
-        return windows::Result::Ok(());
+        // return windows::Result::Ok(());
 
         // Ensure we have a DispatcherQueue on this thread.
         // Note - this pattern is only necessary if you need to create a DispatcherQueue on a thread (ex as part
